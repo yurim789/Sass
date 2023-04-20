@@ -1,0 +1,241 @@
+// @use  'reset';
+
+
+// @mixin font-style($hole){
+//   font-size: $hole;
+//   letter-spacing: -1px;
+// }
+
+// h2 {
+//   @include font-style(40px);
+//   color : reset.$main-color;
+// }
+// h3 {
+//   @include font-style(30px);
+// }
+// h4 {
+//   font-size: 10px;
+//   letter-spacing: -1px;
+// }
+
+// 예제1
+.first-list{
+  li {
+    width: 300px;
+    list-style: none;
+    border-radius: 1px solid #000;
+    padding: 20px;
+    border: 1px solid #eee;
+    &:active {
+      background-color: rgb(121, 121, 196);
+      color: #fff;
+    }
+  }
+}
+
+
+// 예제2
+// 내가 한 mixin문법
+// @mixin box-style($bgc, $border, $color){
+//   padding: 10px;
+//   border-radius: 5px;
+//   background-color: $bgc;
+//   border: 1px solid $border;
+//   color: $color;
+// }
+
+// .green-box {
+//   @include box-style(#229f71,green,green)
+// }
+// .red-box {
+//   @include box-style(rgb(240, 154, 154),red,red)
+// }
+// .blue-box {
+//   @include box-style(rgb(138, 138, 238),blue,blue)
+// }
+
+// 코딩애플 include문법
+.box-style {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  background-color: green;
+  color: #fff;
+}
+.green-box {
+  @extend .box-style;
+  background-color: green;
+  box-shadow: 5px 5px 5px #000;
+}
+.red-box {
+  @extend .box-style;
+  background-color: red;
+}
+.blue-box {
+  @extend .box-style;
+  background-color: blue;
+}
+
+
+// 예제3
+@mixin row-style() {
+  background-color: rgb(243, 201, 243);
+  border: 1px solid rgb(229, 104, 229);
+  padding: 15px;
+}
+
+.row {
+  display: flex;
+  .col-6 {
+    @include row-style();
+    width: (100% / 2);
+  }
+  .col-4 {
+    @include row-style();
+    width: (100% / 3);
+  }
+  .col-3 {
+    @include row-style();
+    width: (100% / 4);
+  }
+}
+
+// float
+
+@mixin hf-style($bgc) {
+  width: 100%;
+  height: 100px;
+  background-color: $bgc;
+}
+@mixin menu($width, $bgc) {
+  width: $width;
+  height: 300px;
+  background-color: $bgc;
+  display: inline-block;
+}
+
+.container {
+  width: 800px;
+}
+.header {
+  @include hf-style(red);
+}
+.left-menu {
+  @include menu(20%, green)
+}
+.right {
+  @include menu(80%, yellowgreen)
+}
+.footer {
+  @include hf-style(skyblue);
+}
+
+
+//내가한거
+// .blog-post {
+//   margin: 50px 10px;
+//   border-bottom: 1px solid #000;
+//   margin-bottom: 10px;
+//   display: flex;
+// }
+
+// .txt {
+//   width: 80%;
+//   float: left;
+// }
+
+// .profile {
+//   display: flex;
+//   align-items: center;
+//   img {
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 50%;
+//     object-fit: cover;
+//     border: 1px solid #000;
+//     margin-right: 10px;
+//   }
+// }
+// .profile-txt {
+//   vertical-align: middle;
+// }
+
+// .post {
+//   margin-top: -20px;
+// }
+
+// .share-icon {
+//   margin-top: -20px;
+//   margin-bottom: 20px;
+//   text-align: right;
+//   margin-right: 20px;
+// }
+
+// .img-box {
+//   // width: 20%;
+//   float: left;
+//   img {
+//     width: 150px;
+//     height: 150px;
+//     object-fit: cover;
+//   }
+// }
+//여기까지
+
+
+// float줘서 다시한거
+.clear {
+  clear: both;
+}
+
+.blog-post {
+  width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.txt {
+  width: 80%;
+}
+
+.profile {
+  margin-top: 20px;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    object-fit: cover;
+    float: left;
+    margin-right: 30px;
+  }
+
+  span {
+    color: #888;
+  }
+}
+
+.share-icon {
+  text-align: right;
+  margin-bottom: 20px;
+  color: #888
+}
+
+.img-box {
+  width: 20%;
+  float: right;
+  margin-left: 10px;
+  padding-top: 70px;
+  margin: 10px;
+  
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+}
+// 여기까지
+

@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F9FC;
+}
+
+.white-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 2px 1px #eee;
+
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.profile-txt {
+  border-left: 2px solid #E8E8E8;
+}
+
+.text-box, .line-top {
+  border-top: 2px solid #E8E8E8;
+  padding: 20px 0;
+}
+
+.badge {
+ background-color: #fff;
+ color: #444;
+ border: 1px solid #444;
+}
+
+.sign-up-box {
+  
+  i {
+    font-size: 70px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.friends-box {
+
+  h5 {
+    border-bottom: 2px solid #E8E8E8;
+    padding-bottom: 15px;
+    color: #444;
+    font-size: 18px;
+    display: block;
+  }
+
+  h4 {
+    font-size: 20px;
+    display: block;
+    margin: 0;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+}
+
+
+input[type=file]::-webkit-file-upload-button {
+  background-color: skyblue;
+  color: #fff;
+  border: none;
+}
+
+input::-webkit-input-placeholder {
+  color: brown;
+}
+
+input[type=range] {
+  appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  background-color: red;
+  width: 10px;
+  height: 10px;
+}
+
+progress {
+  // 기본 배경 없애기
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+}
+
+progress::-webkit-progress-bar {
+  background-color: skyblue;
+}
+progress::-webkit-progress-value {
+  background-color: blue;
+}

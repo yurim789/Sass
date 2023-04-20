@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.main-top {
+  background: linear-gradient(#4997DC, #4E61C0);
+  height: 500px;
+  position: relative;
+}
+
+
+@mixin btn-style() {
+  background-color: #444445;
+  color: #fff;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.main-top-txt {
+  color: #fff;
+  position: relative;
+  top: 100px;
+  left: 100px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  button {
+    @include btn-style();
+  }
+}
+
+.main-top-img {
+
+  img {
+    width: 350px;
+    position: absolute;
+    bottom: 0;
+    right: 180px;
+  }
+}
+
+.txt-content {
+  margin: 70px auto;
+  text-align: center;
+  line-height: 30px;
+
+  button {
+    @include btn-style();
+    margin-top: 10px;
+  }
+}
+
+@mixin icon-style($font-color, $i-bg-color) {
+  ul {
+    margin: 80px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    color: #fff;
+    padding: 0 40px;
+  }
+  
+  i {
+    background-color: $i-bg-color;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: $font-color;
+    margin-bottom: 15px;
+  }
+}
+
+.icon-list {
+  height: 400px;
+  background-color: #4E61C0;
+
+  @include icon-style(#4E61C0, #fff);  
+}
+
+.icon-list-top-txt {
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.icon-box {
+  display: flex;
+}
+
+.bottom-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bottom-content-txt {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.bottom-content-img {
+  position: relative;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 50%;
+    display: flex;
+    float: left;
+  }
+}
+
+.bottom-content-img-txt {
+  position: absolute;
+  top: 70px;
+  left: 60px;
+  color: #fff;
+}
+
+.footer-icon-list {
+  clear: both;
+  padding-top: 20px;
+
+  @include icon-style(#fff, #4E61C0);
+
+  p {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-top {
+    max-width: 768px;
+    // position: relative;
+  }
+  
+  .main-top-txt {
+    color: #fff;
+    top: 10%;
+    left: 0;
+  
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    p {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    button {
+      position: relative;
+      left: 45%;
+    }
+  }
+  
+  .main-top-img {
+  
+    img {
+      width: 250px;
+      position: absolute;
+      bottom: 0;
+      right: 20%;
+    }
+  }
+}

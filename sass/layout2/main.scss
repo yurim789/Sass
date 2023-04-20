@@ -1,0 +1,286 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// nav {
+//   height: 60px;
+//   background-color: #4E8FBA;
+//   display: flex;
+//   color:#fff;
+//   justify-content: space-between;
+// }
+
+// nav * {
+//   margin: 10px 20px;
+// }
+
+// .nav-menu {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .main-background {
+//   height: 500px;
+//   background-image: url(./images/라이언1.png);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   padding: 1px 0 0 30px;
+
+//   h1 {
+//     color: #fff;
+//     margin-top: 100px;
+//   }
+
+//   p {
+//     color: #fff;
+//   }
+
+//   button {
+//     border: none;
+//     border-radius: 5px;
+//     padding: 10px 20px;
+//     font-weight: bold;
+//     cursor: pointer;
+//     margin-top: 20px;
+
+//     &:hover {
+//       color: #fff;
+//       background-color: transparent;
+//       border: 2px solid #fff;
+//     }
+//   }
+// }
+
+// .txt-box {
+//   width: 80%;
+//   max-width: 600px;
+//   background-color: #eee;
+//   text-align: center;
+//   padding: 20px;
+//   border-radius: 10px;
+//   position: relative;
+//   margin: 0 auto;
+//   top: -50px;
+// }
+
+// .input-wrapper {
+//   margin: 0 auto;
+//   padding: 0 auto;
+
+//   h6 {
+//     font-size: 16px;
+//   }
+// }
+
+// @mixin input-style {
+//   border-radius: 5px;
+//   padding: 10px;
+// }
+
+// @mixin text-style {
+//   margin-bottom: 5px;
+// }
+
+// .input-wrapper {
+//   margin: 0 auto;
+//   padding: 0 auto;
+// }
+
+.info-wrapper-bg {
+  background-color: #888;
+  padding: 30px;
+}
+
+// .info-wrapper {
+//   width: 80%;
+//   max-width: 600px;
+//   background-color: #fff;
+//   margin: auto;
+//   padding: 20px;
+//   border-radius: 5px;
+// }
+
+// .title {
+//   margin-left: 10px;
+// }
+
+// h1 {
+//   margin-bottom: 30px;
+// }
+
+// .wid-100 {
+//   width: 100%;
+//   padding: 10px;
+
+//   h3 {
+//     @include text-style();
+//   }
+
+//   input {
+//     width: 100%;
+//     @include input-style();
+//   }
+
+//   textarea {
+//     @include input-style();
+//     width: 100%;
+//     border: 2px solid #000;
+//   }
+// }
+
+// .wid-50 {
+//   float: left;
+//   width: 50%;
+//   padding: 10px;
+  
+//   h3 {
+//     @include text-style();
+//   }
+
+//   input {
+//     @include input-style();
+//     width: 100%;
+//   }
+// }
+
+// .submit-button {
+//   width: 100%;
+//   padding: 10px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+  
+//   button {
+//     display: block;
+//     width: 130px;
+//     float: right;
+//     border: none;
+//     border-radius: 5px;
+//     background-color: orange;
+//     padding: 10px;
+//     color: #fff;
+//   }
+// }
+
+// .check-box {
+//   display: flex;
+//   float: left;
+
+//   input {
+//     margin-right: 5px;
+//   }
+// }
+
+
+// 반응형 레이아웃
+// 1200px
+.media-menu-wrapper {
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.media-menu-content {
+  margin: auto;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.font-style {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.medeia-menu-content-txt {
+  text-align: center;
+
+  i {
+    background-color: burlywood;
+    padding: 20px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px
+  }
+}
+
+.shop-bg {
+  background-color: #eee;
+  padding: 20px;
+}
+
+.shop-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.shop-item {
+  width: 33%;
+  padding: 10px;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0%;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+  overflow: hidden;
+
+  &:hover {
+    height: 60%;
+    opacity: 0.4;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  h1 {
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+  }
+
+  span {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width : 1200px) {
+  
+  .media-menu-content {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .font-style {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  .media-menu-content {
+    display: block;
+    text-align: center;
+  }
+
+  .medeia-menu-content-txt {
+    margin-right: 10px;
+    padding: 10px;
+  }
+}
+
+
